@@ -56,12 +56,12 @@ Acts as a central point of communication and facilitates collaboration among tea
 
 This project involved a variety of skills:
 
-* **Front-End Development:** Building a user-friendly interface with HTML, CSS, and potentially JavaScript ([Link to a relevant front-end development tutorial or documentation]).
-* **Back-End Development:** Processing form submissions and potentially storing data in a database (if applicable) ([Link to a relevant back-end development tutorial or documentation]).
-* **Testing:** Writing unit tests to ensure code quality ([Link to a unit testing framework documentation, e.g., Jest]).
-* **Collaboration:** Working effectively in a team using Git for version control ([Link to Git documentation]).
+* **Front-End Development:** Building a user-friendly interface with HTML, CSS, and potentially JavaScript ([https://www.freecodecamp.org/learn]).
+* **Back-End Development:** Processing form submissions and potentially storing data in a database (if applicable) ([https://www.freecodecamp.org/learn]).
+* **Testing:** Writing unit tests to ensure code quality ([https://jestjs.io/docs/getting-started]).
+* **Collaboration:** Working effectively in a team using Git for version control ([https://git-scm.com/doc]).
 * **UML Modeling:** Creating Unified Modeling Language (UML) diagrams to visualize the system's structure and behavior.
-    * **Use Case Diagrams:** Developing diagrams to represent the different ways users interact with the application to achieve specific goals. These diagrams help in understanding the system's functionality from a user's perspective. ([Link to a UML Use Case Diagram tutorial or documentation]).
+    * **Use Case Diagrams:** Developing diagrams to represent the different ways users interact with the application to achieve specific goals. These diagrams help in understanding the system's functionality from a user's perspective. ([https://www.justinmind.com/blog/use-case-diagramming-examples/]).
 
 ### License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
