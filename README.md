@@ -42,7 +42,7 @@ Acts as a central point of communication and facilitates collaboration among tea
 ## Getting Started
 
 1.  **Clone this repository** to your local machine.
- ```bash
+ ```
     git clone https://github.com/bahati7/MKB-cohort-2-Demo.git
     ```
 2.  **Navigate to the Issues tab** of this repository.
