@@ -42,12 +42,9 @@ Acts as a central point of communication and facilitates collaboration among tea
 ## Getting Started
 
 1.  **Clone this repository** to your local machine.
- ```
-    git clone https://github.com/bahati7/MKB-cohort-2-Demo.git
-    ```
 2.  **Navigate to the Issues tab** of this repository.
-3.  **Identify the use case or any issue** assigned to your team.
-4.  **Begin working on documenting the use case** as described in the issue section.
+3.  **Identify the use case** assigned to your team.
+4.  **Begin working on documenting the use case** as described in the next section.
 
 ### Prerequisites
 - Git
