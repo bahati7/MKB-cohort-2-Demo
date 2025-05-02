@@ -1,305 +1,67 @@
+# User: [Name of Actor]
+=========================
 
-    .div {
-      gap: 20px;
-      display: flex;
-    }
-    @media (max-width: 991px) {
-      .div {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0px;
-      }
-    }
-    .column {
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 25%;
-      margin-left: 0px;
-    }
-    @media (max-width: 991px) {
-      .column {
-        width: 100%;
-      }
-    }
-    .div-2 {
-      align-self: stretch;
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-      color: #fff;
-      white-space: nowrap;
-      justify-content: center;
-    }
-    @media (max-width: 991px) {
-      .div-2 {
-        white-space: initial;
-      }
-    }
-    .div-3 {
-      disply: flex;
-      flex-direction: column;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      aspect-ratio: 0.5;
-      width: 100%;
-      justify-content: center;
-    }
-    @media (max-width: 991px) {
-      .div-3 {
-        white-space: initial;
-      }
-    }
-    .img {
-      position: absolute;
-      inset: 0;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-    .div-4 {
-      position: relative;
-      justify-content: flex-end;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.7) 100%
-      );
-      display: flex;
-      flex-direction: column;
-      padding: 40px;
-    }
-    @media (max-width: 991px) {
-      .div-4 {
-        white-space: initial;
-        padding: 0 20px;
-      }
-    }
-    .div-5 {
-      font-feature-settings: "clig" off, "liga" off;
-      text-transform: uppercase;
-      margin-top: 368px;
-      font: 700 38px/38px DIN Condensed, -apple-system, Roboto, Helvetica,
-        sans-serif;
-    }
-    @media (max-width: 991px) {
-      .div-5 {
-        margin-top: 40px;
-      }
-    }
-    .div-6 {
-      font-feature-settings: "clig" off, "liga" off;
-      text-transform: capitalize;
-      margin-top: 8px;
-      font: 400 12px/133.5% Poppins, sans-serif;
-    }
-    .column-2 {
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 25%;
-      margin-left: 20px;
-    }
-    @media (max-width: 991px) {
-      .column-2 {
-        width: 100%;
-      }
-    }
-    .div-7 {
-      align-self: stretch;
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-      color: #fff;
-      justify-content: center;
-    }
-    .div-8 {
-      disply: flex;
-      flex-direction: column;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      aspect-ratio: 0.5;
-      width: 100%;
-      justify-content: center;
-    }
-    .div-9 {
-      position: relative;
-      justify-content: flex-end;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.7) 100%
-      );
-      display: flex;
-      flex-direction: column;
-      padding: 40px;
-    }
-    @media (max-width: 991px) {
-      .div-9 {
-        padding: 0 20px;
-      }
-    }
-    .div-10 {
-      font-feature-settings: "clig" off, "liga" off;
-      text-transform: uppercase;
-      margin-top: 368px;
-      font: 700 38px/38px DIN Condensed, -apple-system, Roboto, Helvetica,
-        sans-serif;
-    }
-    @media (max-width: 991px) {
-      .div-10 {
-        margin-top: 40px;
-      }
-    }
-    .div-11 {
-      font-feature-settings: "clig" off, "liga" off;
-      text-transform: capitalize;
-      margin-top: 8px;
-      font: 400 12px/133.5% Poppins, sans-serif;
-    }
-    .column-3 {
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 25%;
-      margin-left: 20px;
-    }
-    @media (max-width: 991px) {
-      .column-3 {
-        width: 100%;
-      }
-    }
-    .div-12 {
-      align-self: stretch;
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-      color: #fff;
-      justify-content: center;
-    }
-    .div-13 {
-      disply: flex;
-      flex-direction: column;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      aspect-ratio: 0.5;
-      width: 100%;
-      justify-content: center;
-    }
-    .div-14 {
-      position: relative;
-      justify-content: flex-end;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.7) 100%
-      );
-      display: flex;
-      flex-direction: column;
-      padding: 40px;
-    }
-    @media (max-width: 991px) {
-      .div-14 {
-        padding: 0 20px;
-      }
-    }
-    .div-15 {
-      font-feature-settings: "clig" off, "liga" off;
-      text-transform: uppercase;
-      margin-top: 368px;
-      font: 700 38px/38px DIN Condensed, -apple-system, Roboto, Helvetica,
-        sans-serif;
-    }
-    @media (max-width: 991px) {
-      .div-15 {
-        margin-top: 40px;
-      }
-    }
-    .div-16 {
-      font-feature-settings: "clig" off, "liga" off;
-      text-transform: capitalize;
-      margin-top: 8px;
-      font: 400 12px/133.5% Poppins, sans-serif;
-    }
-    .column-4 {
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 25%;
-      margin-left: 20px;
-    }
-    @media (max-width: 991px) {
-      .column-4 {
-        width: 100%;
-      }
-    }
-    .div-17 {
-      align-self: stretch;
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-      color: #fff;
-      white-space: nowrap;
-      justify-content: center;
-    }
-    @media (max-width: 991px) {
-      .div-17 {
-        white-space: initial;
-      }
-    }
-    .div-18 {
-      disply: flex;
-      flex-direction: column;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      aspect-ratio: 0.5;
-      width: 100%;
-      justify-content: center;
-    }
-    @media (max-width: 991px) {
-      .div-18 {
-        white-space: initial;
-      }
-    }
-    .div-19 {
-      position: relative;
-      justify-content: flex-end;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.7) 100%
-      );
-      display: flex;
-      flex-direction: column;
-      padding: 40px;
-    }
-    @media (max-width: 991px) {
-      .div-19 {
-        white-space: initial;
-        padding: 0 20px;
-      }
-    }
-    .div-20 {
-      font-feature-settings: "clig" off, "liga" off;
-      text-transform: uppercase;
-      margin-top: 368px;
-      font: 700 38px/38px DIN Condensed, -apple-system, Roboto, Helvetica,
-        sans-serif;
-    }
-    @media (max-width: 991px) {
-      .div-20 {
-        margin-top: 40px;
-      }
-    }
-    .div-21 {
-      font-feature-settings: "clig" off, "liga" off;
-      text-transform: capitalize;
-      margin-top: 8px;
-      font: 400 12px/133.5% Poppins, sans-serif;
-    }
- 
+**Description**: A brief overview of this user type and their role within the system.
+
+**Required Skills**:
+* Bullet point list of the technical or conceptual skills this actor needs to interact with the system effectively.
+* ...
+
+**Special Considerations**:
+* Bullet point list of any unique needs, limitations, or important factors to keep in mind for this actor.
+* ...
+
+**Goals**:
+* Bullet point list of the primary objectives this actor tries to achieve by using the system.
+* ...
+
+**Responsibilities**:
+* Bullet point list of the key tasks and duties this actor performs within the context of the application.
+* ...
+
+**Interactions with Use Cases**:
+* Bullet point list of the use cases this actor typically interacts with.
+    * [Link to Use Case Name.md] - Brief description of the interaction.
+    * [Link to Another Use Case Name.md] - Brief description of the interaction.
+    * ...
+
+**Potential Roles within the System**:
+* Bullet point list of the different roles this actor might have within the system, especially if role-based permissions are considered.
+* ...
+
+**Example (for Student):**
+
+# User: Student
+=========================
+
+**Description**: An individual enrolled in a course or session who provides feedback on their learning experience.
+
+**Required Skills**:
+* Basic digital literacy (navigating web interfaces, filling out forms).
+* Ability to read and understand survey questions.
+
+**Special Considerations**:
+* May have varying levels of technical proficiency.
+* May access the platform from different devices (desktop, mobile).
+* Motivation to provide honest and constructive feedback may vary.
+* Data privacy concerns regarding their responses.
+
+**Goals**:
+* To provide feedback on their learning experience.
+* To potentially review their past feedback.
+
+**Responsibilities**:
+* Logging into the platform.
+* Locating and selecting relevant surveys.
+* Answering survey questions honestly and thoughtfully.
+* Submitting completed surveys.
+
+**Interactions with Use Cases**:
+* [./usecases/ProvideFeedback.md] - Provides their responses to learning experience questions.
+* [./usecases/ReviewPastFeedback.md] - Views their previously submitted feedback.
+* [./usecases/ManageUserAccounts.md] - Creates and accesses their account.
+* [./usecases/ExperiencePersonalizedSurvey.md] - Interacts with surveys tailored to them.
+
+**Potential Roles within the System**:
+* Authenticated User
+* Feedback Provider
