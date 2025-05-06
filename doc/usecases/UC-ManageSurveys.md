@@ -1,14 +1,18 @@
-Use Case: Name of use case.
+Use Case: Manage survey.
 =================================
-**Actors**: Actor
+**Actors**: Instructor, Administor
 
 **Scope**: Software system
 
-**Purpose**: Intention of the use case.
+**Purpose**: Enable instructors to create, edit, and delete surveys for students.
 
-**Type**: Primary (Secondary, Optional)
+**Type**: Primary 
 
-**Overview**: A brief description of what happens in this use case.
+**Overview**: This use case describes how an instructor manages surveys within the system.  
+the instructor can create new surveys, edit existing ones, and delete those that are no longer needed.  
+the system provides an intuitive interface to easily manage surveys to ensure they remain up-to-date  
+and relevant to participant needs. This process facilitates the collection of relevant data  
+and preparation of surveys for effective delivery.
 
 Typical course of events:
 ----------------------
