@@ -1,24 +1,25 @@
-Use Case: Name of use case.
+Use Case: Login.
 =================================
-**Actors**: Actor
+**Actors**: Student, Instructor, Administrator.
 
-**Scope**: Software system
+**Scope**: Survey Management Software System.
 
-**Purpose**: Intention of the use case.
+**Purpose**: To securely authenticate users (students, instructors, administrators) and redirect them to their personalized dashboard according to their roles.
 
-**Type**: Primary (Secondary, Optional)
+**Type**: Primary.
 
-**Overview**: A brief description of what happens in this use case.
+**Overview**: This use case describes the process through which users log into the system. The system authenticates them based on their credentials and grants them access to a personalized dashboard where they can perform tasks specific to their roles. Each actor interacts with the login module in a way that initiates their workflow within the system, whether it's completing a survey, managing course content, or overseeing platform activity.
 
 Typical course of events:
 ----------------------
 
 | Actor Action | System Response |
 |:--------------|:----------------|
-| 1. This use case begins when Actor wants to initiate an event.| |
-| 2. The Actor does something... | 3. The system determines something or responds... |
-|4. ||
-|5. | 6. |
+| 1. This use case begins when a Student, Instructor, or Administrator attempts to log into the platform. | |
+| 2. The Actor accesses the login interface and enters their username and password. | 3. The system verifies the provided credentials. |
+|4. |If credentials are valid, the system identifies the role of the user.|
+|5. | The system redirects the user to their personalized dashboard (student dashboard, instructor dashboard, or admin panel). |
+|6. | The system logs the login activity for audit and security purposes. |
 
 
 Alternative Courses:
@@ -33,7 +34,7 @@ Section: A subsection of the use case, e.g. Paying by cash
 -----------
 | Actor Action | System Response |
 |:--------------|:----------------|
-| 1. This use case begins when Actor wants to initiate an event.| |
-| 2. The Actor does something... | 3. The system determines something or responds... |
+| 1. ...| |
+| 2. ... | 3. ... |
 |4. ||
 |5. | 6. |
