@@ -23,17 +23,10 @@ Typical course of events:
 | 1. The Instructor navigates to the survey management section of the system. | 2. The system displays a list of existing surveys created by the instructor, along with options to create a new survey, edit an existing one, or delete a survey. |
 | 3. The Instructor chooses to either:
 3a. The Instructor selects the "Create New Survey" option. | 4. The system presents the Instructor with an interface to define survey details such as title, description, opening date, and closing date. |
-| 3b. The Instructor selects a survey from the list. | (This action leads to further steps for editing, not a direct system response at this point in the typical flow.) |
-| 3c. The Instructor selects a survey from the list and chooses the "Delete" option. | (This action leads to a confirmation and deletion, likely a subsequent system response.) |
+| 3b. The Instructor selects a survey from the list. |  7. The system displays the selected survey with options to modify its details (title, dates) and questions. |
+| 3c. The Instructor selects a survey from the list and chooses the "Delete" option. | 10. The system prompts the Instructor for confirmation to delete the selected survey |
 | 5. The Instructor enters the survey details and proceeds to add questions. | 6. The system provides tools for the Instructor to create different types of questions (e.g., multiple choice, text-based), define answer options, and mark questions as mandatory or optional. |
-
-
-
-
-
-
-
-
+| 8. The Instructor modifies the survey details or questions as needed. | 9. The system saves the changes made by the Instructor. |
 
 
 
