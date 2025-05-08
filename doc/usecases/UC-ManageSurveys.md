@@ -29,7 +29,11 @@ Typical course of events:
 | 8. The Instructor modifies the survey details or questions as needed. | 9. The system saves the changes made by the Instructor. |
 | 11. The Instructor confirms the deletion. | 12. The system removes the survey from the list. |
 | 13. The Instructor may choose to preview the survey before finalizing it. | 14. The system displays a preview of the survey as it would appear to the respondents. |
-| 15. The Instructor reviews the preview and either:<br>    (15a) Decides the survey is ready and proceeds to make it available.<br>    (15b) Identifies a need for further edits and navigates back to the editing interface. |  |
+| 15. The Instructor reviews the preview and either:<br>    (15a) Decides the survey is ready and proceeds to make it available.<br>    (15b) Identifies a need for further edits and navigates back to the editing interface. | 16. The system provides options for the Instructor to manage survey distribution (e.g., generate a link, send invitations). |
+| 17. The Instructor chooses a method of distribution. | 18. The system generates the survey link or initiates the invitation process. |
+| 19. Respondents access and complete the survey. | 20. The system collects and stores the survey responses. |
+| 21. The Instructor navigates to the survey results/reporting section. | 22. The system displays a summary or detailed view of the collected responses, potentially with options for analysis and export. |
+
 
 
 Alternative Courses:
