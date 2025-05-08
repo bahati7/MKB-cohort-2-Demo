@@ -38,11 +38,12 @@ Typical course of events:
 
 Alternative Courses:
 -----------
-1a. ...
+3a: The Instructor attempts to create a new survey without entering a title. The system displays an error message prompting for a title.
 
-3a. ...
+3b: The Instructor attempts to edit a survey that is currently active (within its opening and closing dates). <br>   The system displays a warning message indicating that some modifications might affect ongoing responses and requires confirmation to proceed.
 
-3b. ...
+
+3c: The Instructor attempts to delete a survey that has received student responses. <br>   The system displays a warning message indicating that deleting the survey will also remove all associated responses and requires confirmation. 
 
 Section: A subsection of the use case, e.g. Paying by cash
 -----------
