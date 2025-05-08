@@ -27,7 +27,9 @@ Typical course of events:
 | 3c. The Instructor selects a survey from the list and chooses the "Delete" option. | 10. The system prompts the Instructor for confirmation to delete the selected survey |
 | 5. The Instructor enters the survey details and proceeds to add questions. | 6. The system provides tools for the Instructor to create different types of questions (e.g., multiple choice, text-based), define answer options, and mark questions as mandatory or optional. |
 | 8. The Instructor modifies the survey details or questions as needed. | 9. The system saves the changes made by the Instructor. |
-
+| 11. The Instructor confirms the deletion. | 12. The system removes the survey from the list. |
+| 13. The Instructor may choose to preview the survey before finalizing it. | 14. The system displays a preview of the survey as it would appear to the respondents. |
+| 15. The Instructor reviews the preview and either:<br>    (15a) Decides the survey is ready and proceeds to make it available.<br>    (15b) Identifies a need for further edits and navigates back to the editing interface. |  |
 
 
 Alternative Courses:
