@@ -1,67 +1,46 @@
-# User: [Name of Actor]
+# User: Admin
 =========================
 
-**Description**: A brief overview of this user type and their role within the system.
+**Description**:  
+* Ensuring effective communication between instructors and students when using the survey app. 
 
 **Required Skills**:
-* Bullet point list of the technical or conceptual skills this actor needs to interact with the system effectively.
-* ...
+* must have the système administration 
+* must have the user administration skills.
+ ...
 
 **Special Considerations**:
-* Bullet point list of any unique needs, limitations, or important factors to keep in mind for this actor.
-* ...
+* Must have varying levels of technical proficiency.
+* Must access the platform from different devices (desktop, mobile).
+* Must be motivated to provide honest and well organised feedback.
+* Must take care of data privacy concerns users responses.
 
 **Goals**:
-* Bullet point list of the primary objectives this actor tries to achieve by using the system.
+* Assigning instructors to their respective classes.
+* Managing class schedules. 
+* Ensuring effective communication between instructors and students. »
 * ...
 
 **Responsibilities**:
-* Bullet point list of the key tasks and duties this actor performs within the context of the application.
+* User Management: Creating, deleting, and modifying accounts (including those of teachers and students).
+* Security Management: Configuring security protocols, managing access and permissions.
+* System Configuration: Configuring general platform functionality.
+* Class Management (Structure): Creating, deleting, and organizing classes (without necessarily being a teacher).
+* Survey Management (Structure): Creating, deleting, and organizing survey templates.
+* Technical Support: Assisting teachers and students with technical issues.
+* Overall Analysis: Generating reports and analyses on overall platform usage.
+
 * ...
 
 **Interactions with Use Cases**:
-* Bullet point list of the use cases this actor typically interacts with.
-    * [Link to Use Case Name.md] - Brief description of the interaction.
-    * [Link to Another Use Case Name.md] - Brief description of the interaction.
-    * ...
-
-**Potential Roles within the System**:
-* Bullet point list of the different roles this actor might have within the system, especially if role-based permissions are considered.
+* [UC-Login.md] - Each user logs in through a secure interface into a personalized dashboard based on their role within the system. 
+* [UC-ManageSurvey.md] - Enable instructors to create, edit, or delete surveys.
+* [UC-ProvideFeedback.md] - The administrator generate reports on created surveys, user participation, general trends, and overall system activity
+   
 * ...
 
-**Example (for Student):**
-
-# User: Student
-=========================
-
-**Description**: An individual enrolled in a course or session who provides feedback on their learning experience.
-
-**Required Skills**:
-* Basic digital literacy (navigating web interfaces, filling out forms).
-* Ability to read and understand survey questions.
-
-**Special Considerations**:
-* May have varying levels of technical proficiency.
-* May access the platform from different devices (desktop, mobile).
-* Motivation to provide honest and constructive feedback may vary.
-* Data privacy concerns regarding their responses.
-
-**Goals**:
-* To provide feedback on their learning experience.
-* To potentially review their past feedback.
-
-**Responsibilities**:
-* Logging into the platform.
-* Locating and selecting relevant surveys.
-* Answering survey questions honestly and thoughtfully.
-* Submitting completed surveys.
-
-**Interactions with Use Cases**:
-* [./usecases/ProvideFeedback.md] - Provides their responses to learning experience questions.
-* [./usecases/ReviewPastFeedback.md] - Views their previously submitted feedback.
-* [./usecases/ManageUserAccounts.md] - Creates and accesses their account.
-* [./usecases/ExperiencePersonalizedSurvey.md] - Interacts with surveys tailored to them.
-
 **Potential Roles within the System**:
-* Authenticated User
-* Feedback Provider
+* Generator of reports and analyses on overall platform usage.
+* Management of users within the App 
+
+
