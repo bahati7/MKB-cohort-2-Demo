@@ -58,13 +58,11 @@ Alternative Courses:
 12a: The Instructor cancels the deletion request. <br> The system returns to the list of surveys without deleting the selected survey.
 
 14a: During the survey preview, the system encounters an error rendering a specific question type. <br> The system displays a generic error message for that section and advises the instructor to review the question setup.
+   
 
-
-Section: A subsection of the use case, e.g. Paying by cash
+Section:MANAGING QUESTION TYPES
 -----------
 | Actor Action | System Response |
 |:--------------|:----------------|
-| 1. This use case begins when Actor wants to initiate an event.| |
-| 2. The Actor does something... | 3. The system determines something or responds... |
-|4. ||
-|5. | 6. |
+| 1. While creating or editing a survey, the Instructor chooses to add a new question. | 2. The system presents a selection of available question types (e.g., Multiple Choice, True/False, Short Answer, Essay). |
+| 3. The Instructor selects a question type. | 4. The system displays the specific interface for defining the selected question type (e.g., for Multiple Choice, fields to enter the question text and answer options). |  
