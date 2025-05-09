@@ -51,6 +51,13 @@ Alternative Courses:
 
 6b: The Instructor tries to mark more than one answer as correct for a single-choice question. <br>  The system prevents this and might display a message clarifying the question type.
 
+8a: The Instructor modifies a question type (e.g., changes a multiple-choice to a text-based question)  that already has responses.  <br>  The system displays a warning that this change might invalidate existing answers for that question and requires confirmation. 
+
+9a: The system fails to save the changes due to a technical issue. <br> The system displays an error message and might suggest retrying.
+
+12a: The Instructor cancels the deletion request. <br> The system returns to the list of surveys without deleting the selected survey.
+
+14a: During the survey preview, the system encounters an error rendering a specific question type. <br> The system displays a generic error message for that section and advises the instructor to review the question setup.
 
 
 Section: A subsection of the use case, e.g. Paying by cash
