@@ -7,7 +7,7 @@
 **Required Skills**:
 * must have the système administration 
 * must have the user administration skills.
- ...
+
 
 **Special Considerations**:
 * Must have varying levels of technical proficiency.
@@ -16,10 +16,9 @@
 * Must take care of data privacy concerns users responses.
 
 **Goals**:
-* Assigning instructors to their respective classes.
-* Managing class schedules. 
+* Assigning instructors to their respective classes. 
 * Ensuring effective communication between instructors and students. »
-* ...
+
 
 **Responsibilities**:
 * User Management: Creating, deleting, and modifying accounts (including those of teachers and students).
@@ -30,14 +29,12 @@
 * Technical Support: Assisting teachers and students with technical issues.
 * Overall Analysis: Generating reports and analyses on overall platform usage.
 
-* ...
 
 **Interactions with Use Cases**:
 * [UC-Login.md] - Each user logs in through a secure interface into a personalized dashboard based on their role within the system. 
-* [UC-ManageSurvey.md] - Enable instructors to create, edit, or delete surveys.
-* [UC-ProvideFeedback.md] - The administrator generate reports on created surveys, user participation, general trends, and overall system activity
+* [UC-ManageSurvey.md] - the admnistrator will enable instructors to create, edit, or delete surveys and classes.
+* [UC-ProvideFeedback.md] - The administrator generate reports on created surveys, user participation, general trends, and overall system activity.
    
-* ...
 
 **Potential Roles within the System**:
 * Generator of reports and analyses on overall platform usage.

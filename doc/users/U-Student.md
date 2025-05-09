@@ -1,36 +1,3 @@
-# User: [Name of Actor]
-=========================
-
-**Description**: A brief overview of this user type and their role within the system.
-
-**Required Skills**:
-* Bullet point list of the technical or conceptual skills this actor needs to interact with the system effectively.
-* ...
-
-**Special Considerations**:
-* Bullet point list of any unique needs, limitations, or important factors to keep in mind for this actor.
-* ...
-
-**Goals**:
-* Bullet point list of the primary objectives this actor tries to achieve by using the system.
-* ...
-
-**Responsibilities**:
-* Bullet point list of the key tasks and duties this actor performs within the context of the application.
-* ...
-
-**Interactions with Use Cases**:
-* Bullet point list of the use cases this actor typically interacts with.
-    * [Link to Use Case Name.md] - Brief description of the interaction.
-    * [Link to Another Use Case Name.md] - Brief description of the interaction.
-    * ...
-
-**Potential Roles within the System**:
-* Bullet point list of the different roles this actor might have within the system, especially if role-based permissions are considered.
-* ...
-
-**Example (for Student):**
-
 # User: Student
 =========================
 
