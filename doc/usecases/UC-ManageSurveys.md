@@ -45,6 +45,14 @@ Alternative Courses:
 
 3c: The Instructor attempts to delete a survey that has received student responses. <br>   The system displays a warning message indicating that deleting the survey will also remove all associated responses and requires confirmation. 
 
+4a: The Instructor enters invalid date formats for the opening or closing date.  <br>  The system displays an error message indicating the correct date format. 
+
+6a: The Instructor attempts to create a multiple-choice question without providing any answer options. <br>  The system displays an error message requiring at least one answer option.
+
+6b: The Instructor tries to mark more than one answer as correct for a single-choice question. <br>  The system prevents this and might display a message clarifying the question type.
+
+
+
 Section: A subsection of the use case, e.g. Paying by cash
 -----------
 | Actor Action | System Response |
