@@ -1,7 +1,7 @@
 # User: Student
 =========================
 
-**Description**: An individual enrolled in a course or session who provides feedback on their learning experience.
+**Description**: An MKB student in a course or session who provides feedback on their learning experience.
 
 **Required Skills**:
 * Basic digital literacy (navigating web interfaces, filling out forms).
@@ -27,7 +27,6 @@
 * [./usecases/ProvideFeedback.md] - Provides their responses to learning experience questions.
 * [./usecases/ReviewPastFeedback.md] - Views their previously submitted feedback.
 * [./usecases/ManageUserAccounts.md] - Creates and accesses their account.
-* [./usecases/ExperiencePersonalizedSurvey.md] - Interacts with surveys tailored to them.
 
 **Potential Roles within the System**:
 * Authenticated User
