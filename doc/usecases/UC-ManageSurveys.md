@@ -65,4 +65,5 @@ Section:MANAGING QUESTION TYPES
 | Actor Action | System Response |
 |:--------------|:----------------|
 | 1. While creating or editing a survey, the Instructor chooses to add a new question. | 2. The system presents a selection of available question types (e.g., Multiple Choice, True/False, Short Answer, Essay). |
-| 3. The Instructor selects a question type. | 4. The system displays the specific interface for defining the selected question type (e.g., for Multiple Choice, fields to enter the question text and answer options). |  
+| 3. The Instructor selects a question type. | 4. The system displays the specific interface for defining the selected question type (e.g., for Multiple Choice, fields to enter the question text and answer options). |   
+| 5. The Instructor enters the question text and relevant options | 6. The system saves the question and allows the Instructor to add more questions or finalize the survey structure. |  
