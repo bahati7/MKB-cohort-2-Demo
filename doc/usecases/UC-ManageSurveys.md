@@ -44,19 +44,19 @@ Alternative Courses:
 
 **3c :** The Instructor selects a completed survey with student responses and chooses to delete it. <br> $\rightarrow$ The system displays a warning: "Deleting this survey will also permanently remove all associated student responses. Are you sure you want to delete this survey?". The Instructor can confirm or cancel the deletion.
 
-4a: The Instructor enters invalid date formats for the opening or closing date.  <br>  The system displays an error message indicating the correct date format. 
+**4a :** The Instructor enters invalid date formats for the opening or closing date.<br> $\rightarrow$  The system displays an error message indicating the correct date format. 
 
-6a: The Instructor attempts to create a multiple-choice question without providing any answer options. <br>  The system displays an error message requiring at least one answer option.
+**6a :** The Instructor creates a 'Multiple Choice' question but does not add any answer choices. <br> $\rightarrow$ Upon trying to save the question, the system displays an error: "Please provide at least one answer option for this multiple-choice question.".
 
-6b: The Instructor tries to mark more than one answer as correct for a single-choice question. <br>  The system prevents this and might display a message clarifying the question type.
+**6b :** For a 'Single Choice' question, the Instructor attempts to mark two different answer options as the 'correct' answer. <br> $\rightarrow$ The system prevents the second selection and may display a message: "Only one answer can be marked as correct for a single-choice question.".
 
-8a: The Instructor modifies a question type (e.g., changes a multiple-choice to a text-based question)  that already has responses.  <br>  The system displays a warning that this change might invalidate existing answers for that question and requires confirmation. 
+**8a :** The Instructor changes a question from 'Multiple Choice' to 'Short Answer' after some students have already responded. <br> $\rightarrow$ The system displays a warning: "Changing the question type will invalidate existing answers for this question. Are you sure you want to proceed?". 
 
-9a: The system fails to save the changes due to a technical issue. <br> The system displays an error message and might suggest retrying.
+**9a :** The system fails to save the changes due to a technical issue.<br> $\rightarrow$ The system displays an error message and might suggest retrying.
 
-12a: The Instructor cancels the deletion request. <br> The system returns to the list of surveys without deleting the selected survey.
+**12a :** The Instructor cancels the deletion request. <br> $\rightarrow$ The system returns to the list of surveys without deleting the selected survey.
 
-14a: During the survey preview, the system encounters an error rendering a specific question type. <br> The system displays a generic error message for that section and advises the instructor to review the question setup.
+**14a :** During the survey preview, the system encounters an error rendering a specific question type. <br> $\rightarrow$ The system displays a generic error message for that section and advises the instructor to review the question setup.
    
 
 Section:MANAGING QUESTION TYPES
