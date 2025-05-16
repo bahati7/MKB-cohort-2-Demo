@@ -38,12 +38,11 @@ Typical course of events:
 
 Alternative Courses:
 -----------
-3a: The Instructor attempts to create a new survey without entering a title. The system displays an error message prompting for a title.
+**3a :** The Instructor attempts to create a new survey and leaves the 'Title' field blank. <br> $\rightarrow$ The system displays an error message: "Please enter a title for the survey." and prevents further progress until a title is provided.
 
-3b: The Instructor attempts to edit a survey that is currently active (within its opening and closing dates). <br>   The system displays a warning message indicating that some modifications might affect ongoing responses and requires confirmation to proceed.
+**3b :** The Instructor selects an active survey and attempts to edit it. <br> $\rightarrow$ The system displays a warning: "This survey is currently active. Modifying questions may affect submitted responses. Do you want to proceed?". The Instructor can then choose to proceed with the edit or cancel.
 
-
-3c: The Instructor attempts to delete a survey that has received student responses. <br>   The system displays a warning message indicating that deleting the survey will also remove all associated responses and requires confirmation. 
+**3c :** The Instructor selects a completed survey with student responses and chooses to delete it. <br> $\rightarrow$ The system displays a warning: "Deleting this survey will also permanently remove all associated student responses. Are you sure you want to delete this survey?". The Instructor can confirm or cancel the deletion.
 
 4a: The Instructor enters invalid date formats for the opening or closing date.  <br>  The system displays an error message indicating the correct date format. 
 
