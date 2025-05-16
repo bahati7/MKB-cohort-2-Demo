@@ -58,11 +58,20 @@ Alternative Courses:
 
 **14a :** During the survey preview, the system encounters an error rendering a specific question type. <br> $\rightarrow$ The system displays a generic error message for that section and advises the instructor to review the question setup.
    
+ Business Exception : 
+-----------
 
-Section:MANAGING QUESTION TYPES
+**Business Exception 1:** The Instructor attempts to create a survey that would result in more than 20 questions in total. <br> $\rightarrow$ The system displays an error message: "Surveys cannot exceed 20 questions." and prevents the addition of the question.
+
+**Business Exception 2:** The Instructor attempts to publish a new survey for a course that already has an active survey. <br> $\rightarrow$ The system displays a warning: "There is already an active survey for this course. Please close the existing survey before publishing a new one." and prevents publication.
+
+**Business Exception 3:** The Instructor attempts to publish a survey to a class that they are not assigned to manage. <br> $\rightarrow$ The system displays an error message: "You do not have permission to publish surveys to this class." and prevents publication. 
+ 
+
+Section: MANAGING QUESTION TYPES
 -----------
 | Actor Action | System Response |
 |:--------------|:----------------|
-| 1. While creating or editing a survey, the Instructor chooses to add a new question. | 2. The system presents a selection of available question types (e.g., Multiple Choice, True/False, Short Answer, Essay). |
+| 1. While creating or editing a survey, the Instructchooses to add a new question. | 2. The system presents a selection of available question types (e.g., Multiple Choice, True/False, Short Answer, Essay). |
 | 3. The Instructor selects a question type. | 4. The system displays the specific interface for defining the selected question type (e.g., for Multiple Choice, fields to enter the question text and answer options). |   
 | 5. The Instructor enters the question text and relevant options | 6. The system saves the question and allows the Instructor to add more questions or finalize the survey structure. |  
