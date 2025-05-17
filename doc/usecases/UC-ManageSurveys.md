@@ -106,3 +106,14 @@ This sub-flow details the steps for an Instructor to edit an existing survey. It
 | **7.** The Instructor may preview the survey (steps 13-14 of Typical course of events). |
 | **8.** The Instructor saves the changes. |
 | **9.** The Instructor may choose to republish the edited survey (similar to steps 16-18 of Typical course of events). |
+
+Sub-flow: Delete Survey
+-----------
+This sub-flow details the steps for an Instructor to delete a survey. It corresponds to the path taken when the Instructor chooses option 3c in the Typical course of events.
+
+
+| Actor Action | System Response |
+|:--------------|:----------------|
+| 1. The Instructor navigates to the survey management section. | 2. The system displays the list of existing surveys. |
+| 3. The Instructor selects a survey to delete and chooses the "Delete" option. | 4. The system prompts for confirmation (step 10 of Typical course of events). |
+| 5. The Instructor confirms the deletion (step 11 of Typical course of events). |  6. The system removes the survey (step 12 of Typical course of events). | 
