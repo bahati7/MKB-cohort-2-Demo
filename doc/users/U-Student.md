@@ -6,6 +6,7 @@
 **Required Skills**:
 * Basic digital literacy (navigating web interfaces, filling out forms).
 * Ability to read and understand survey questions.
+* Willingness to give honest feedback on their learning experience.
 
 **Special Considerations**:
 * May have varying levels of technical proficiency.
@@ -29,5 +30,5 @@
 * [./usecases/ManageUserAccounts.md] - Creates and accesses their account.
 
 **Potential Roles within the System**:
-* Authenticated User
-* Feedback Provider
+* Authenticated User.
+* Feedback Provider.
