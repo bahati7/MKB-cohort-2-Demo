@@ -72,6 +72,18 @@ Section: MANAGING QUESTION TYPES
 -----------
 | Actor Action | System Response |
 |:--------------|:----------------|
-| 1. While creating or editing a survey, the Instructchooses to add a new question. | 2. The system presents a selection of available question types (e.g., Multiple Choice, True/False, Short Answer, Essay). |
+| 1. While creating or editing a survey, the Instructor chooses to add a new question. | 2. The system presents a selection of available question types (e.g., Multiple Choice, True/False, Short Answer, Essay). |
 | 3. The Instructor selects a question type. | 4. The system displays the specific interface for defining the selected question type (e.g., for Multiple Choice, fields to enter the question text and answer options). |   
 | 5. The Instructor enters the question text and relevant options | 6. The system saves the question and allows the Instructor to add more questions or finalize the survey structure. |  
+
+sub-flow: create new survey
+-----------
+| Actor Action | System Response |
+|:--------------|:----------------|
+| 1. The Instructor navigates to the survey management section. | 2. The system displays the survey management interface with an option to "Create New Survey". |
+| 3. The Instructor selects a survey to edit. | 4. The system displays the selected survey with options to modify details and questions. |
+| 5. The Instructor modifies the survey details (title, dates) (steps 8-9 of Typical course of events).| 
+| 6. The Instructor edits, adds, or removes questions using the "MANAGING QUESTION TYPES" section. |
+| 7. The Instructor adds questions using the "MANAGING QUESTION TYPES" section. |
+| 8. The Instructor may preview the survey (steps 13-14 of Typical course of events). |
+| 9. The Instructor finalizes the survey and makes it available (steps 15-18 of Typical course of eveents). |
