@@ -78,6 +78,8 @@ Section: MANAGING QUESTION TYPES
 
 sub-flow: create new survey
 -----------
+This sub-flow details the steps for an Instructor to create a new survey. It corresponds to the path taken when the Instructor chooses option 3a in the Typical course of events.
+
 | Actor Action | System Response |
 |:--------------|:----------------|
 | 1. The Instructor navigates to the survey management section. | 2. The system displays the survey management interface with an option to "Create New Survey". |
