@@ -117,3 +117,13 @@ This sub-flow details the steps for an Instructor to delete a survey. It corresp
 | 1. The Instructor navigates to the survey management section. | 2. The system displays the list of existing surveys. |
 | 3. The Instructor selects a survey to delete and chooses the "Delete" option. | 4. The system prompts for confirmation (step 10 of Typical course of events). |
 | 5. The Instructor confirms the deletion (step 11 of Typical course of events). |  6. The system removes the survey (step 12 of Typical course of events). | 
+
+Administrative Review/Disable Survey (Administrator Role)
+-----------
+
+| Actor Action | System Response |
+|:--------------|:----------------|
+| **1.**  The Administrator navigates to the survey management section (with broader access than Instructors). | **2.**  The system displays a list of all surveys. |
+| **3.**  The Administrator selects a survey to review. | **4.** The system displays the survey details and associated responses. |
+|  **5.**  The Administrator may choose to disable a survey (e.g., if it violates guidelines). | **6.**  The system prompts for confirmation to disable the survey. |
+| **7.**  The Administrator confirms. | **8.**  The system marks the survey as disabled, preventing further responses. |
