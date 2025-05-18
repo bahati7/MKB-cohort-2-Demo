@@ -52,10 +52,33 @@ OR
 
 ## Alternative Courses
 
+**1a.** The user chooses to register a new account instead of logging in.  
+→ The system redirects them to the registration form where they provide the required information.
 
+**2a.** Invalid credentials (1st to 5th failed attempt)  
+→ The system displays an error message: _"Incorrect username or password."_  
+→ The attempt is logged as failed.  
+→ The user is allowed to retry within limits.
+
+**2b.** Exceeded maximum login attempts  
+→ After 3 failed attempts:  
+• Account is locked for 1 minute.  
+→ After 5 failed attempts:  
+• Account is locked for 3 minutes.  
+→ The system displays an alert: _"Too many failed attempts. Please try again in X minutes."_  
+→ Optionally, an administrator is notified or a security log entry is created.
 
 > **Clarification:**  
+If the **Administrator** is locked out, the system sends a recovery link to their email. If email fails, then they will have to log into the hosting provider's cPanel and access the database, then modify their password while respecting the hashing method used in the application.  This is why they need to have advanced technical skills.
 
 ---
 
 ## Section: Forgotten Password Recovery
+| Actor Action | System Response |
+|:--------------|:----------------|
+| 1. The actor clicks “Forgot password?” on the login screen. | |
+| 2. The actor enters their registered email address. | 3. The system checks if the email exists. |
+| 4. | If valid, the system sends a secure password reset link to the email. |
+| 5. The actor clicks the link in their inbox. | 6. The system opens a secure page to reset the password. |
+| 7. The actor submits the new password. | 8. The system updates the password and confirms the change. |
+| 9. | The actor is redirected to the login page with a success message. |
