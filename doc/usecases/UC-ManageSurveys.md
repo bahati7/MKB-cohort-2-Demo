@@ -127,3 +127,14 @@ Administrative Review/Disable Survey (Administrator Role)
 | **3.**  The Administrator selects a survey to review. | **4.** The system displays the survey details and associated responses. |
 |  **5.**  The Administrator may choose to disable a survey (e.g., if it violates guidelines). | **6.**  The system prompts for confirmation to disable the survey. |
 | **7.**  The Administrator confirms. | **8.**  The system marks the survey as disabled, preventing further responses. |
+
+Student Notification and Access
+-----------
+
+**1.** The Instructor makes a su rvey available (as in step 16 of the alternative course of events). <br>
+**2.** The system (optionally, depending on configuration) notifies students enrolled in the relevant course about the new survey <br>(e.g., via email or in-system notification).   <br>
+**3.** The notification includes the survey title and the closing date. <br>
+**4.** Students can access the survey via a provided link or through a survey list within their student portal.     
+**5.** Students complete and submit their responses (step 19 of the alternative course of events).
+
+    
