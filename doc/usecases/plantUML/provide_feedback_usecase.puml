@@ -4,27 +4,50 @@ left to right direction
 
 actor "User" as user
 actor "Admin" as admin
+actor "Moderator" as moderator
 
 rectangle "Feedback System" {
+
   usecase "Provide Feedback" as UC_Main
+
+  ' Existing flow
+  usecase "Access Dashboard" as UC_Dashboard
+  usecase "Select Survey" as UC_Select
+  usecase "Complete Survey" as UC_Complete
+  usecase "Submit Survey" as UC_Submit
+  usecase "Receive Confirmation" as UC_Confirm
+  usecase "Save Progress" as UC_Save
+
+  UC_Main --> UC_Dashboard : include
+  UC_Main --> UC_Select : include
+  UC_Main --> UC_Complete : include
+  UC_Main --> UC_Submit : include
+  UC_Main --> UC_Confirm : include
+  UC_Main --> UC_Save : include
+
+  ' New use cases
+  usecase "Access Feedback Data" as UC_Access
+  usecase "No Surveys Available" as UC_None
+  usecase "Incomplete Survey Handling" as UC_Incomplete
+  usecase "Validate Required Fields" as UC_Validate
+  usecase "Review Feedback" as UC_Review
+  usecase "Flag Feedback" as UC_Flag
+  usecase "Respond to Feedback" as UC_Respond
+
+  ' Extensions
+  UC_None --> UC_Dashboard : extend
+  UC_Incomplete --> UC_Save : extend
+  UC_Validate --> UC_Submit : extend
+  UC_Access --> UC_Main : extend
+  UC_Review --> UC_Main : extend
+  UC_Flag --> UC_Confirm : extend
+  UC_Respond --> UC_Main : extend
 }
 
 user --> UC_Main
-admin --> UC_Main
-
-'Included use cases representing steps in the feedback process
-usecase "Access Dashboard" as UC_Dashboard
-usecase "Select Survey" as UC_Select
-usecase "Complete Survey" as UC_Complete
-usecase "Submit Survey" as UC_Submit
-usecase "Receive Confirmation" as UC_Confirm
-usecase "Save Progress" as UC_Save
-
-UC_Main --> UC_Dashboard : include
-UC_Main --> UC_Select : include
-UC_Main --> UC_Complete : include
-UC_Main --> UC_Submit : include
-UC_Main --> UC_Confirm : include
-UC_Main --> UC_Save : include
+admin --> UC_Access
+admin --> UC_Review
+admin --> UC_Respond
+moderator --> UC_Flag
 
 @enduml
