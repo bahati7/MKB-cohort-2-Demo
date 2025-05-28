@@ -2,28 +2,29 @@
 
 left to right direction
 
-actor Student
-actor "Instructor/Admin" as reviewer
+actor "User" as user
+actor "Admin" as admin
 
 rectangle "Feedback System" {
   usecase "Provide Feedback" as UC_Main
 }
 
-Student --> UC_Main
-reviewer --> UC_Main
-'Included use cases representing steps in the feedback process
-  usecase "Access Dashboard" as UC_Dashboard
-  usecase "Select Survey" as UC_Select
-  usecase "Complete Survey" as UC_Complete
-  usecase "Submit Survey" as UC_Submit
-  usecase "Receive Confirmation" as UC_Confirm
-  usecase "Save Progress" as UC_Save
+user --> UC_Main
+admin --> UC_Main
 
-  UC_Main --> UC_Dashboard : include
-  UC_Main --> UC_Select : include
-  UC_Main --> UC_Complete : include
-  UC_Main --> UC_Submit : include
-  UC_Main --> UC_Confirm : include
-  UC_Main --> UC_Save : include
+'Included use cases representing steps in the feedback process
+usecase "Access Dashboard" as UC_Dashboard
+usecase "Select Survey" as UC_Select
+usecase "Complete Survey" as UC_Complete
+usecase "Submit Survey" as UC_Submit
+usecase "Receive Confirmation" as UC_Confirm
+usecase "Save Progress" as UC_Save
+
+UC_Main --> UC_Dashboard : include
+UC_Main --> UC_Select : include
+UC_Main --> UC_Complete : include
+UC_Main --> UC_Submit : include
+UC_Main --> UC_Confirm : include
+UC_Main --> UC_Save : include
 
 @enduml
