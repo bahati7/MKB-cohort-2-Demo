@@ -1,1 +1,16 @@
 provide_feedback_usecase.puml
+@startuml provide_feedback_usecase
+
+left to right direction
+
+actor Student
+actor "Instructor/Admin" as reviewer
+
+rectangle "Feedback System" {
+  usecase "Provide Feedback" as UC_Main
+}
+
+Student --> UC_Main
+reviewer --> UC_Main
+
+@enduml
