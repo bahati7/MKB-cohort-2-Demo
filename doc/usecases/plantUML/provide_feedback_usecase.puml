@@ -2,9 +2,9 @@
 
 left to right direction
 
-actor "User" as user
+actor "Student" as student
 actor "Admin" as admin
-actor "Moderator" as moderator
+actor "Mentor" as mentor
 
 rectangle "Feedback System" {
 
@@ -44,10 +44,10 @@ rectangle "Feedback System" {
   UC_Respond --> UC_Main : extend
 }
 
-user --> UC_Main
+student --> UC_Main
 admin --> UC_Access
 admin --> UC_Review
 admin --> UC_Respond
-moderator --> UC_Flag
+mentor --> UC_Flag
 
 @enduml
