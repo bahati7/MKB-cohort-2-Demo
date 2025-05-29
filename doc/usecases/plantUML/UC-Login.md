@@ -1,6 +1,9 @@
 # Use Case: Login
-=================================
-**Actors**: Student, Instructor, Administrator
+
+## Actors
+- **Student**: Logs in to access and complete surveys.  
+- **Instructor**: Logs in to manage class activities and analyze feedback.  
+- **Administrator**: Logs in to configure, monitor, and manage the platform. 
 
 **Scope**: Student Survey Application
 
@@ -13,6 +16,29 @@
 ---
 
 ## Use Case Diagram
+```
+@startuml
+left to right direction
+
+actor Student
+actor Instructor
+actor Administrator
+
+rectangle "Student Survey Application" {
+  usecase "Log In" as login
+  usecase "Create Account" as register
+  usecase "Reset Password" as reset
+}
+
+Student -- (login)
+Instructor -- (login)
+Administrator -- (login)
+
+(login) ..> (register) : extends
+(login) .> (reset) : extends
+
+@enduml
+```
 
 Here's a visual representation of the Login use case:
 
