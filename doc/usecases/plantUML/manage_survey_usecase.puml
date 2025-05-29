@@ -38,8 +38,12 @@ EditSurvey -- AddQuestions
 EditSurvey -- SaveChanges
 EditSurvey -- PreviewSurvey
 
+AddQuestions -- SelectQuestionType
+AddQuestions -- EnterQuestionOptions
+AddQuestions -- SaveQuestion
 
-
+ReviewSurveyAdmin -- ReviewResults
+ReviewSurveyAdmin -- DisableSurvey
 
 
 @enduml
