@@ -16,7 +16,7 @@
 
 Here's a visual representation of the Login use case:
 
-![Login Use Case Diagram](login_usecase.puml)
+![Login Use Case Diagram](login_usecase.png)
 
 ---
 
