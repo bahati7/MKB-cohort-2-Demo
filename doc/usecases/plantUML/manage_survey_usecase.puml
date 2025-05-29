@@ -1,1 +1,34 @@
-manage_survey_usecase.puml)
+@startuml
+
+left to right direction
+
+actor instructor
+actor Administrator
+
+usecase "Manage survey" as ManageSurvey
+usecase "Create New Survey" as CreateNewSurvey
+usecase "Edit Existing Survey" as EditSurvey
+usecase "Delete Surevy" as DeleteSurvey
+usecase "Define survey details" as DefineDetails
+usecase "Add questions" as AddQuestions
+usecase "Modify survey details" as ModifyDetails
+usecase "Save changes" as SaveChanges
+usecase "Preview survey" as PreviewSurvey
+usecase "Manage survey distribution" as ManageDistribution
+usecase "Access and complete survey" as CompleteSurvey
+usecase "Collect and store responses" as StoreResponses
+usecase "Review survey results" as ReviewResults
+usecase "Select question type" as SelectQuestionType
+usecase "Enter queston text and options" as EnterQuestionOptions
+usecase "Save question" as SaveQuestion
+usecase "Review survey (Admin)" as ReviewSurveyAdmin
+usecase "Disable survey" as DisableSurvey 
+
+
+
+
+
+
+@enduml
+
+
