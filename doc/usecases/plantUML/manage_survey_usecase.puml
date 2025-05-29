@@ -2,7 +2,7 @@
 
 left to right direction
 
-actor instructor
+actor Instructor
 actor Administrator
 
 usecase "Manage survey" as ManageSurvey
@@ -24,10 +24,12 @@ usecase "Save question" as SaveQuestion
 usecase "Review survey (Admin)" as ReviewSurveyAdmin
 usecase "Disable survey" as DisableSurvey 
 
+Instructor -- ManageSurvey
+Administrator -- ReviewSurveyAdmin
 
-
-
-
+ManageSurvey -- CreateNewSurvey
+ManageSurvey -- EditSurvey
+ManageSurvey -- DeleteSurvey
 
 @enduml
 
