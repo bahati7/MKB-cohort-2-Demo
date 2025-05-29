@@ -31,6 +31,17 @@ ManageSurvey -- CreateNewSurvey
 ManageSurvey -- EditSurvey
 ManageSurvey -- DeleteSurvey
 
+CreateNewSurvey -- DefineDetails
+CreateNewSurvey -- AddQuestions 
+EditSurvey -- ModifyDetails
+EditSurvey -- AddQuestions
+EditSurvey -- SaveChanges
+EditSurvey -- PreviewSurvey
+
+
+
+
+
 @enduml
 
 
