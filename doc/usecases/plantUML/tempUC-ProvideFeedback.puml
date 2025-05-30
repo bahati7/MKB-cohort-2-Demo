@@ -45,8 +45,17 @@ UC_Respond --> UC_AutoSave : <<include>>
 Student --> UC_Submit
 Student --> UC_Confirm
 
+rectangle "Feedback System" {
     usecase UC_Review as "Access aggregated feedback"
     usecase UC_Logs as "Review system logs and analytics"
     usecase UC_Privacy as "Manage access and compliance"
+}
+' Instructor Flow
+Instructor --> UC_Review
+
+' Admin Flow
+Admin --> UC_Review
+Admin --> UC_Logs
+Admin --> UC_Privacy
 
 @enduml
