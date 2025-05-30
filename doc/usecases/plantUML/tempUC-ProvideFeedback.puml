@@ -25,8 +25,6 @@ actor Student
 actor Instructor
 actor Admin
 
-actor Student
-
 rectangle "Feedback System" {
     usecase UC_LoginDashboard as "Log in and access dashboard"
     usecase UC_ViewSurveys as "View available surveys"
@@ -35,27 +33,47 @@ rectangle "Feedback System" {
     usecase UC_AutoSave as "Auto-save progress"
     usecase UC_Submit as "Submit completed survey"
     usecase UC_Confirm as "Receive confirmation message"
-}
-' Student Flow
-Student --> UC_LoginDashboard
-Student --> UC_ViewSurveys
-Student --> UC_ReadInstructions
-Student --> UC_Respond
-UC_Respond --> UC_AutoSave : <<include>>
-Student --> UC_Submit
-Student --> UC_Confirm
-
-rectangle "Feedback System" {
     usecase UC_Review as "Access aggregated feedback"
     usecase UC_Logs as "Review system logs and analytics"
     usecase UC_Privacy as "Manage access and compliance"
-}
-' Instructor Flow
-Instructor --> UC_Review
 
-' Admin Flow
-Admin --> UC_Review
-Admin --> UC_Logs
-Admin --> UC_Privacy
+    ' Student Flow
+    Student --> UC_LoginDashboard
+    Student --> UC_ViewSurveys
+    Student --> UC_ReadInstructions
+    Student --> UC_Respond
+    UC_Respond --> UC_AutoSave : <<include>>
+    Student --> UC_Submit
+    Student --> UC_Confirm
+
+    ' Instructor Flow
+    Instructor --> UC_Review
+
+    ' Admin Flow
+    Admin --> UC_Review
+    Admin --> UC_Logs
+    Admin --> UC_Privacy
+
+    ' Notes for clarifications
+    note right of UC_AutoSave
+        Auto-saves partial responses
+        for disconnection or exit
+    end note
+
+    note bottom of UC_Confirm
+        Confirmation message
+        shown on dashboard
+    end note
+
+    note top of UC_Privacy
+        Ensures data is anonymized
+        and meets GDPR/FERPA standards
+    end note
+
+    note right of UC_Review
+        Only aggregated data accessible
+        to authorized personnel
+    end note
+}
 
 @enduml
