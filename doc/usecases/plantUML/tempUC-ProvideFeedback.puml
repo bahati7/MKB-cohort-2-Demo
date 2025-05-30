@@ -1,0 +1,28 @@
+@startuml provide_feedback_usecase
+
+left to right direction
+skinparam backgroundColor #FAFAFA
+skinparam shadowing true
+
+skinparam actor {
+    BackgroundColor #f9f9f9
+    BorderColor Black
+    FontColor Black
+    Shadowing true
+}
+
+skinparam usecase {
+    BackgroundColor White
+    BorderColor #2C3E50
+    ArrowColor #2C3E50
+    FontColor Black
+    FontSize 12
+    Shadowing true
+    RoundCorner 20
+}
+
+actor Student
+actor Instructor
+actor Admin
+
+@enduml
