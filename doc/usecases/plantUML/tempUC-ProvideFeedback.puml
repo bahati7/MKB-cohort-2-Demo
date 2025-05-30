@@ -25,4 +25,16 @@ actor Student
 actor Instructor
 actor Admin
 
+rectangle "Feedback System" {
+    usecase UC_LoginDashboard as "Log in and access dashboard"
+    usecase UC_ViewSurveys as "View available surveys"
+    usecase UC_ReadInstructions as "Open and read instructions"
+    usecase UC_Respond as "Respond to survey questions"
+    usecase UC_AutoSave as "Auto-save progress"
+    usecase UC_Submit as "Submit completed survey"
+    usecase UC_Confirm as "Receive confirmation message"
+    usecase UC_Review as "Access aggregated feedback"
+    usecase UC_Logs as "Review system logs and analytics"
+    usecase UC_Privacy as "Manage access and compliance"
+}
 @enduml
