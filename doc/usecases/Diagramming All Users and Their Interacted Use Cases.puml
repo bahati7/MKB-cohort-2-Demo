@@ -1,0 +1,44 @@
+@startuml
+' Define actors
+actor Student
+actor Instructor
+actor Administrator
+
+' Define use cases
+usecase "Log in" as UC1
+usecase "Manage Survey" as UC2
+usecase "Complete Survey Feedback" as UC3
+usecase "Review Past Feedback" as UC4
+usecase "Analyze Survey Feedback" as UC5
+usecase "Manage Classes & Instructors" as UC6
+usecase "Analyze System" as UC7
+
+' Relationships
+
+' UC1: Log in
+Student --> UC1
+Instructor --> UC1
+Administrator --> UC1
+
+' UC2: Manage Survey
+Instructor --> UC2 
+Administrator --> UC2
+
+' UC3: Complete Survey Feedback
+Student --> UC3
+
+' UC4: Review Past Feedback
+Student --> UC4
+Instructor --> UC4
+Administrator --> UC4
+
+' UC5: Analyze Survey Feedback
+Instructor --> UC5
+
+' UC6: Manage Classes & Instructors
+Administrator --> UC6
+
+' UC7: Analyze System
+Administrator --> UC7
+
+@endum
