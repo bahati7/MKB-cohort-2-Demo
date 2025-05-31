@@ -2,6 +2,21 @@
 
 left to right direction
 
+skinparam usecase {
+    BackgroundColor lightblue
+    BorderColor darkblue
+    ArrowColor darkgreen
+    FontName Arial
+    FontSize 10
+    StereotypeFontColor darkblue
+}
+skinparam actor{
+    BorderColor darkblue
+    BackgroundColor lightgray
+    FontName Arial
+    FontSize 19
+}
+
 actor Instructor
 actor Administrator
 
