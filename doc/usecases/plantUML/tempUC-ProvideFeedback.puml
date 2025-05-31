@@ -1,5 +1,6 @@
 @startuml provide_feedback_usecase
 
+' Diagram Settings
 left to right direction
 skinparam backgroundColor #FAFAFA
 skinparam shadowing true
@@ -21,11 +22,14 @@ skinparam usecase {
     RoundCorner 20
 }
 
+' Actors
 actor Student
 actor Instructor
 actor Admin
 
+' System Boundary
 rectangle "Feedback System" {
+    ' Use Cases
     usecase UC_LoginDashboard as "Log in and access dashboard"
     usecase UC_ViewSurveys as "View available surveys"
     usecase UC_ReadInstructions as "Open and read instructions"
@@ -37,7 +41,7 @@ rectangle "Feedback System" {
     usecase UC_Logs as "Review system logs and analytics"
     usecase UC_Privacy as "Manage access and compliance"
 
-    ' Student Flow
+    'Student Flow
     Student --> UC_LoginDashboard
     Student --> UC_ViewSurveys
     Student --> UC_ReadInstructions
@@ -57,23 +61,26 @@ rectangle "Feedback System" {
     ' Notes for clarifications
     note right of UC_AutoSave
         Auto-saves partial responses
-        for disconnection or exit
+        in case of disconnection or exit.
     end note
 
     note bottom of UC_Confirm
-        Confirmation message
-        shown on dashboard
+        Confirmation message is displayed
+        on the student dashboard after submission.
     end note
 
     note top of UC_Privacy
         Ensures data is anonymized
-        and meets GDPR/FERPA standards
+        and meets GDPR/FERPA compliance standards.
     end note
 
     note right of UC_Review
-        Only aggregated data accessible
-        to authorized personnel
+        Only aggregated and anonymized data
+        is accessible to authorized users.
     end note
 }
+
+' Diagram Title
+title Feedback System Use Case Diagram
 
 @enduml
