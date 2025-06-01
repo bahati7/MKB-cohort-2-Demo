@@ -1,0 +1,86 @@
+@startuml provide_feedback_usecase
+
+' Diagram Settings
+left to right direction
+skinparam backgroundColor #FAFAFA
+skinparam shadowing true
+
+skinparam actor {
+    BackgroundColor #f9f9f9
+    BorderColor Black
+    FontColor Black
+    Shadowing true
+}
+
+skinparam usecase {
+    BackgroundColor White
+    BorderColor #2C3E50
+    ArrowColor #2C3E50
+    FontColor Black
+    FontSize 12
+    Shadowing true
+    RoundCorner 20
+}
+
+' Actors
+actor Student
+actor Instructor
+actor Admin
+
+' System Boundary
+rectangle "Feedback System" {
+    ' Use Cases
+    usecase UC_LoginDashboard as "Log in and access dashboard"
+    usecase UC_ViewSurveys as "View available surveys"
+    usecase UC_ReadInstructions as "Open and read instructions"
+    usecase UC_Respond as "Respond to survey questions"
+    usecase UC_AutoSave as "Auto-save progress"
+    usecase UC_Submit as "Submit completed survey"
+    usecase UC_Confirm as "Receive confirmation message"
+    usecase UC_Review as "Access aggregated feedback"
+    usecase UC_Logs as "Review system logs and analytics"
+    usecase UC_Privacy as "Manage access and compliance"
+
+    'Student Flow
+    Student --> UC_LoginDashboard
+    Student --> UC_ViewSurveys
+    Student --> UC_ReadInstructions
+    Student --> UC_Respond
+    UC_Respond --> UC_AutoSave : <<include>>
+    Student --> UC_Submit
+    Student --> UC_Confirm
+
+    ' Instructor Flow
+    Instructor --> UC_Review
+
+    ' Admin Flow
+    Admin --> UC_Review
+    Admin --> UC_Logs
+    Admin --> UC_Privacy
+
+    ' Notes for clarifications
+    note right of UC_AutoSave
+        Auto-saves partial responses
+        in case of disconnection or exit.
+    end note
+
+    note bottom of UC_Confirm
+        Confirmation message is displayed
+        on the student dashboard after submission.
+    end note
+
+    note top of UC_Privacy
+        Ensures data is anonymized
+        and meets GDPR/FERPA compliance standards.
+    end note
+
+    note right of UC_Review
+        Only aggregated and anonymized data
+        is accessible to authorized users.
+    end note
+}
+
+' Diagram Title
+title Feedback System Use Case Diagram
+
+@enduml
