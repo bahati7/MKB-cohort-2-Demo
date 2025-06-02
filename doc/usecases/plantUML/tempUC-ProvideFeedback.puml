@@ -22,26 +22,31 @@ skinparam usecase {
     RoundCorner 20
 }
 
+title Feedback System Use Case Diagram
+
 ' Actors
 actor Student
 actor Instructor
-actor Admin
+actor "Authorized Personnel" as Admin
 
 ' System Boundary
 rectangle "Feedback System" {
-    ' Use Cases
-    usecase UC_LoginDashboard as "Log in and access dashboard"
-    usecase UC_ViewSurveys as "View available surveys"
-    usecase UC_ReadInstructions as "Open and read instructions"
-    usecase UC_Respond as "Respond to survey questions"
+    
+    ' Student Use Cases
+    usecase UC_LoginDashboard as "1. Log in and access dashboard"
+    usecase UC_ViewSurveys as "2. View available surveys"
+    usecase UC_ReadInstructions as "3. Open and read instructions"
+    usecase UC_Respond as "4. Respond to survey questions"
     usecase UC_AutoSave as "Auto-save progress"
-    usecase UC_Submit as "Submit completed survey"
-    usecase UC_Confirm as "Receive confirmation message"
+    usecase UC_Submit as "5. Submit completed survey"
+    usecase UC_Confirm as "6. Receive confirmation message"
+    
+    ' Instructor/Admin Use Cases
     usecase UC_Review as "Access aggregated feedback"
     usecase UC_Logs as "Review system logs and analytics"
     usecase UC_Privacy as "Manage access and compliance"
-
-    'Student Flow
+    
+    ' Student Flow (ordered)
     Student --> UC_LoginDashboard
     Student --> UC_ViewSurveys
     Student --> UC_ReadInstructions
@@ -58,29 +63,26 @@ rectangle "Feedback System" {
     Admin --> UC_Logs
     Admin --> UC_Privacy
 
-    ' Notes for clarifications
+    ' Clarifying Notes
     note right of UC_AutoSave
-        Auto-saves partial responses
-        in case of disconnection or exit.
+        Auto-saves student progress
+        during disconnection or exit.
     end note
 
     note bottom of UC_Confirm
-        Confirmation message is displayed
-        on the student dashboard after submission.
-    end note
-
-    note top of UC_Privacy
-        Ensures data is anonymized
-        and meets GDPR/FERPA compliance standards.
+        Confirmation is shown on dashboard
+        after successful submission.
     end note
 
     note right of UC_Review
-        Only aggregated and anonymized data
-        is accessible to authorized users.
+        Only anonymized/aggregated data
+        is available to Instructor/Admin.
+    end note
+
+    note bottom of UC_Privacy
+        Ensures GDPR/FERPA compliance.
+        Manages access permissions.
     end note
 }
-
-' Diagram Title
-title Feedback System Use Case Diagram
 
 @enduml
