@@ -83,6 +83,15 @@ rectangle "Feedback System" {
         Ensures GDPR/FERPA compliance.
         Manages access permissions.
     end note
+
+    note right of UC_ViewSurveys
+    Informs student if no surveys are available.
+end note
+
+note left of UC_Submit
+    Highlights incomplete required fields before allowing submission.
+end note
+
 }
 
 @enduml
