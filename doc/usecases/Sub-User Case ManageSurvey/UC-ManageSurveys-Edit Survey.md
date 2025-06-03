@@ -41,7 +41,7 @@ MS --> Edit : includes
 
 Here's a visual representation of the Login use case:
 
-![UC-ManageSurveys-Edit Survey]!(image-2.png)
+![UC-ManageSurveys-Edit Survey](image-2.png)
 
 ---
 
