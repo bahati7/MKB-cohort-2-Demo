@@ -137,4 +137,93 @@ Student Notification and Access
 **4.** Students can access the survey via a provided link or through a survey list within their student portal.     
 **5.** Students complete and submit their responses (step 19 of the alternative course of events).
 
+```markdown
     
+    @startuml
+
+left to right direction
+
+skinparam usecase {
+    BackgroundColor lightblue
+    BorderColor darkblue
+    ArrowColor darkgreen
+    FontName Arial
+    FontSize 10
+    StereotypeFontColor darkblue
+}
+skinparam actor{
+    BorderColor darkblue
+    BackgroundColor lightgray
+    FontName Arial
+    FontSize 19
+}
+skinparam arrow{
+    color darkgreen
+    Thickness 1.5
+}
+skinparam Linetype ortho
+
+skinparam ActorStyle awesome
+actor Instructor
+actor Administrator
+
+usecase "Manage survey" as ManageSurvey
+usecase "Create New Survey" as CreateNewSurvey
+usecase "Edit Existing Survey" as EditSurvey
+usecase "Delete Surevy" as DeleteSurvey
+usecase "Define survey details" as DefineDetails
+usecase "Add questions" as AddQuestions
+usecase "Modify survey details" as ModifyDetails
+usecase "Save changes" as SaveChanges
+usecase "Preview survey" as PreviewSurvey
+usecase "Review survey results" as ReviewResults
+usecase "Select question type" as SelectQuestionType
+usecase "Enter queston text and options" as EnterQuestionOptions
+usecase "Save question" as SaveQuestion
+usecase "Review survey (Admin)" as ReviewSurveyAdmin
+usecase "Disable survey" as DisableSurvey 
+
+Instructor --> ManageSurvey
+Administrator --> ReviewSurveyAdmin
+
+ManageSurvey --> CreateNewSurvey : includes
+ManageSurvey --> EditSurvey : includes
+ManageSurvey --> DeleteSurvey : includes
+
+CreateNewSurvey --> DefineDetails : includes
+CreateNewSurvey --> AddQuestions : includes
+EditSurvey --> ModifyDetails : includes
+EditSurvey --> AddQuestions : includes
+EditSurvey --> SaveChanges : includes
+EditSurvey --> PreviewSurvey : includes
+
+AddQuestions --> SelectQuestionType : includes
+AddQuestions --> EnterQuestionOptions : includes
+AddQuestions --> SaveQuestion : includes
+
+ReviewSurveyAdmin --> ReviewResults
+ReviewSurveyAdmin --> DisableSurvey
+
+note top of CreateNewSurvey : Sub-flow
+note top of EditSurvey : Sub-flow
+note top of DeleteSurvey: Sub-flow
+
+note "Typical course of events" as TypicalCourse
+TypicalCourse .. ManageSurvey
+
+note "Alternative courses" as AlternativeCourses
+AlternativeCourses .. CreateNewSurvey
+AlternativeCourses .. EditSurvey
+AlternativeCourses .. DeleteSurvey
+
+note "Business Exceptions" as BusinessExceptions
+BusinessExceptions .. CreateNewSurvey
+BusinessExceptions .. EditSurvey
+
+note "Managing Question Types" as ManagingQuestionTypes
+ManagingQuestionTypes .. AddQuestions
+
+@enduml
+```
+![UC-Manage survey Use Case Diagram](manage_survey_usecase.png)
+
