@@ -61,7 +61,9 @@ Here's a visual representation of the Login use case:
 ## Alternative Courses
 
 **3a.** **The selected survey is already closed:** System prevents editing and displays a message: “This survey is closed and cannot be edited.”
+
 **5a.** **Instructor inputs invalid data:** System displays error message and prompts correction.
+
 **7a.** **Instructor tries to delete a question that has already received responses:** System warns: “Deleting this question will invalidate existing responses.”
 
 
