@@ -40,7 +40,7 @@ Administrator ..> (create) : monitors
 
 Here's a visual representation of the Login use case:
 
-![UC-ManageSurveys-Create Survey](Creat_Survey.png)
+![UC-ManageSurveys-Create Survey](image-1.png)
 
 ---
 
@@ -67,7 +67,7 @@ Here's a visual representation of the Login use case:
 
 - The Instructor is authenticated and has access to the survey dashboard.
 
-  ***
+***
 
 ## Postconditions
 
