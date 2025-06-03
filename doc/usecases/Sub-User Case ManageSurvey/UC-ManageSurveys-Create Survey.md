@@ -40,7 +40,7 @@ Administrator ..> (create) : monitors
 
 Here's a visual representation of the Login use case:
 
-![UC-ManageSurveys-Create Survey](image.png)
+![UC-ManageSurveys-Create Survey](Creat_Survey.png)
 
 ---
 
