@@ -1,14 +1,12 @@
-## Diagraming all the use case
-https://bit.ly/43XPJvl
- @startuml
+@startuml
 
- left to right direction
+left to right direction
 actor "Student" 
 
- left to right direction
+left to right direction
 actor "Instructor"
 
- rectangle MKB  {
+rectangle MKB  {
   usecase "Log in" as UC1
   usecase "Complete Survey Feedback" as UC2
   usecase "Manage Survey" as UC3
