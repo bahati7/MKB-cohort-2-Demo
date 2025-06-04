@@ -39,3 +39,43 @@ Postconditions
 $\rightarrow$ Successful Deletion: The selected survey is permanently removed from the system. <br>
 $\rightarrow$ Cancelled Deletion: The selected survey remains in the system, and no changes are made. <br>
 $\rightarrow$ Survey Not Found: The selected survey remains in the system (or was already removed), and the Instructor is notified of the issue.
+
+```markdown
+@startuml
+left to right direction
+
+skinparam usecase {
+    BackgroundColor lightblue
+    BorderColor darkblue
+    ArrowColor darkgreen
+    FontName Arial
+    FontSize 10
+    StereotypeFontColor darkblue
+}
+skinparam actor{
+    BorderColor darkblue
+    BackgroundColor lightgray
+    FontName Arial
+    FontSize 19
+}
+
+actor Instructor as "Instructor"
+
+rectangle "Survey Management System" {
+  usecase (Manage Surveys) as UC_ManageSurveys
+  usecase (Select Survey to Delete) as UC_SelectSurvey
+  usecase (Confirm Deletion) as UC_ConfirmDelete
+  usecase (Remove Survey) as UC_RemoveSurvey
+}
+
+Instructor --> UC_ManageSurveys
+UC_ManageSurveys --> UC_SelectSurvey
+UC_SelectSurvey --> UC_ConfirmDelete
+UC_ConfirmDelete .> UC_RemoveSurvey : <<include>> if Confirmed
+
+UC_ConfirmDelete -[dotted]left-> UC_ManageSurveys : Cancels
+UC_SelectSurvey -[dotted]up-> UC_ManageSurveys : Not Found
+
+@enduml
+```
+![UC-Delete Survey Diagram](DeleteSurvey.png)
