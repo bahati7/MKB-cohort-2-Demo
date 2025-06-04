@@ -3,7 +3,7 @@
 1. Student
 2. Instructor
 3. Admin
-
+``` markdown
 @startuml
  
 left to right direction
@@ -37,5 +37,6 @@ actor "Instructor"
  Admin --> UC5
 
 @enduml
-
+```
 Here's a visual representation of all the main Use cases and the user they interact with:
+![UC-All users](PlantUMLDiagram.png)
