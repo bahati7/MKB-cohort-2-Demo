@@ -3,7 +3,7 @@
 left to right direction
 title Provide Feedback - Use Case Diagram
 
-' Only include styling if consistency across diagrams is necessary, else use default PlantUML look for simplicity, @Ash mentioned it in the discussion
+' Only include styling if consistency across diagrams is necessary, else use default PlantUML look for simplicity @Ash mentioned it in #28 discussion
 
 ' Primary Actor
 actor Student
@@ -31,5 +31,8 @@ rectangle "Feedback System" {
     UC_SubmitSurvey --> UC_Confirmation : <<include>>
     Student --> UC_Confirmation
 }
+    UC_Respond --> UC_AutoSave : <<include>>
+    UC_SubmitSurvey --> UC_Validation : <<include>>
+    UC_SubmitSurvey --> UC_Confirmation : <<include>>
 
 @enduml
