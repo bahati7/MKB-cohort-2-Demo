@@ -1,97 +1,35 @@
 @startuml provide_feedback_usecase
 
-' Diagram Settings
 left to right direction
-skinparam backgroundColor #FAFAFA
-skinparam shadowing true
+title Provide Feedback - Use Case Diagram
 
-skinparam actor {
-    BackgroundColor #f9f9f9
-    BorderColor Black
-    FontColor Black
-    Shadowing true
-}
+' Only include styling if consistency across diagrams is necessary, else use default PlantUML look for simplicity, @Ash mentioned it in the discussion
 
-skinparam usecase {
-    BackgroundColor White
-    BorderColor #2C3E50
-    ArrowColor #2C3E50
-    FontColor Black
-    FontSize 12
-    Shadowing true
-    RoundCorner 20
-}
-
-title Feedback System Use Case Diagram
-
-' Actors
+' Primary Actor
 actor Student
-actor Instructor
-actor "Authorized Personnel" as Admin
 
 ' System Boundary
 rectangle "Feedback System" {
-    
-    ' Student Use Cases
-    usecase UC_LoginDashboard as "1. Log in and access dashboard"
-    usecase UC_ViewSurveys as "2. View available surveys"
-    usecase UC_ReadInstructions as "3. Open and read instructions"
-    usecase UC_Respond as "4. Respond to survey questions"
+
+    usecase UC_Login as "Log in"
+    usecase UC_ViewSurveys as "View available surveys"
+    usecase UC_ReadInstructions as "Read survey instructions"
+    usecase UC_Respond as "Respond to survey questions"
+    usecase UC_SubmitSurvey as "Submit completed survey"
+    usecase UC_Confirmation as "View confirmation message"
     usecase UC_AutoSave as "Auto-save progress"
-    usecase UC_Submit as "5. Submit completed survey"
-    usecase UC_Confirm as "6. Receive confirmation message"
-    
-    ' Instructor/Admin Use Cases
-    usecase UC_Review as "Access aggregated feedback"
-    usecase UC_Logs as "Review system logs and analytics"
-    usecase UC_Privacy as "Manage access and compliance"
-    
-    ' Student Flow (ordered)
-    Student --> UC_LoginDashboard
+    usecase UC_Validation as "Validate required fields"
+
+    ' Main flow
+    Student --> UC_Login
     Student --> UC_ViewSurveys
     Student --> UC_ReadInstructions
     Student --> UC_Respond
     UC_Respond --> UC_AutoSave : <<include>>
-    Student --> UC_Submit
-    Student --> UC_Confirm
-
-    ' Instructor Flow
-    Instructor --> UC_Review
-
-    ' Admin Flow
-    Admin --> UC_Review
-    Admin --> UC_Logs
-    Admin --> UC_Privacy
-
-    ' Clarifying Notes
-    note right of UC_AutoSave
-        Auto-saves student progress
-        during disconnection or exit.
-    end note
-
-    note bottom of UC_Confirm
-        Confirmation is shown on dashboard
-        after successful submission.
-    end note
-
-    note right of UC_Review
-        Only anonymized/aggregated data
-        is available to Instructor/Admin.
-    end note
-
-    note bottom of UC_Privacy
-        Ensures GDPR/FERPA compliance.
-        Manages access permissions.
-    end note
-
-    note right of UC_ViewSurveys
-    Informs student if no surveys are available.
-end note
-
-note left of UC_Submit
-    Highlights incomplete required fields before allowing submission.
-end note
-
+    Student --> UC_SubmitSurvey
+    UC_SubmitSurvey --> UC_Validation : <<include>>
+    UC_SubmitSurvey --> UC_Confirmation : <<include>>
+    Student --> UC_Confirmation
 }
 
 @enduml
