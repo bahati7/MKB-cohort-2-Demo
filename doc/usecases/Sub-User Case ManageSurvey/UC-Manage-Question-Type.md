@@ -36,3 +36,63 @@ Postconditions
 $\rightarrow$ A new question, with its defined type and content, is added to the survey.
 $\rightarrow$ The Instructor can continue adding more questions or finalize the survey. <br>
 $\rightarrow$ If the operation was cancelled, the survey remains in its previous state. <br>
+
+```markdown
+
+@startuml
+left to right direction
+
+skinparam usecase {
+    BackgroundColor lightblue
+    BorderColor darkblue
+    ArrowColor darkgreen
+    FontName Arial
+    FontSize 10
+    StereotypeFontColor darkblue
+}
+skinparam actor{
+    BorderColor darkblue
+    BackgroundColor lightgray
+    FontName Arial
+    FontSize 19
+}
+skinparam arrow{
+    color darkgreen
+    Thickness 1.5
+}
+
+skinparam ActorStyle awesome
+actor "Instructor" as Instructor
+
+rectangle "Managing question type" {
+  usecase "Add New Question" as UC1
+  usecase "Select Question Type" as UC2
+  usecase "Define Multiple Choice Question" as UC3a
+  usecase "Define True/False Question" as UC3b
+  usecase "Define Short Answer Question" as UC3c
+  usecase "Define Essay Question" as UC3d
+  usecase "Save Question" as UC4
+  usecase "Finalize Survey" as UC5
+  usecase "Add More Questions" as UC6
+}
+
+Instructor --> UC1 : chooses to add
+UC1 --> UC2 : presents selection
+UC2 --> UC3a : selects "Multiple Choice"
+UC2 --> UC3b : selects "True/False"
+UC2 --> UC3c : selects "Short Answer"
+UC2 --> UC3d : selects "Essay"
+
+
+UC3a --> UC4 
+UC3b --> UC4 
+UC3c --> UC4 
+UC3d --> UC4 
+
+UC4 --> UC5 : allows
+UC4 --> UC6 : allows
+
+@enduml
+```
+![UC-Managing Question type Use Case Diagram](ManageQuestionType.png)
+
