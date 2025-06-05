@@ -34,5 +34,25 @@ rectangle "Feedback System" {
     UC_Respond --> UC_AutoSave : <<include>>
     UC_SubmitSurvey --> UC_Validation : <<include>>
     UC_SubmitSurvey --> UC_Confirmation : <<include>>
+    
+     note right of UC_AutoSave
+        Automatically saves partial progress
+        during disconnection or exit.
+    end note
+
+    note right of UC_Validation
+        Ensures all required questions are answered.
+        Prompts student to complete missing fields.
+    end note
+
+    note right of UC_Confirmation
+        Displays thank-you message and
+        marks the survey as completed on dashboard.
+    end note
+
+    note top of UC_ViewSurveys
+        Displays available surveys assigned to the student.
+        Informs if no surveys are currently available.
+    end note
 
 @enduml
