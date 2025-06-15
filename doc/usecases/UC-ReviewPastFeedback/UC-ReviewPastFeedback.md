@@ -66,3 +66,61 @@ Security and Privacy Considerations:
 - All views and exports are over HTTPS to ensure data in transit is encrypted.  
 - Viewing and export actions are logged with timestamp, actor ID, and accessed survey ID for audit trails.  
 - Retention policies apply: feedback older than the configured retention period is archived or purged according to data protection regulations.  
+
+<!-- PlantUML diagram -->
+@startuml ReviewPastFeedback
+' Use Case: Review Past Feedback
+' Actors: Student, Instructor, Administrator
+' Purpose: Let actors view history of submitted feedback
+left to right direction
+skinparam packageStyle rectangle
+
+actor Student
+actor Instructor
+actor Administrator
+
+rectangle "Feedback History Module" {
+  
+  usecase "Authenticate User" as UC_Auth
+  usecase "List Completed Surveys" as UC_List
+  usecase "Filter/Search History" as UC_Filter
+  usecase "View Response Details" as UC_Details
+  usecase "Export Feedback" as UC_Export
+
+  UC_List .> UC_Auth : <<include>>
+  UC_Filter .> UC_List : <<include>>
+  UC_Details .> UC_List : <<include>>
+  UC_Export .> UC_Details : <<include>>
+}
+
+Student      --> UC_Auth
+Instructor   --> UC_Auth
+Administrator --> UC_Auth
+
+UC_Auth      --> UC_List
+Student      --> UC_List
+Instructor   --> UC_List
+Administrator --> UC_List
+
+Student      --> UC_Filter
+Instructor   --> UC_Filter
+Administrator --> UC_Filter
+
+Student      --> UC_Details
+Instructor   --> UC_Details
+Administrator --> UC_Details
+
+Instructor   --> UC_Export
+Administrator --> UC_Export
+
+note right of UC_Filter
+  • By date range, survey title  
+  • Students see only own entries  
+end note
+
+note left of UC_Export
+  • CSV, PDF formats  
+  • Anonymization enforced per role  
+end note
+
+@enduml

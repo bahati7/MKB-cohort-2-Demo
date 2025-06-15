@@ -58,3 +58,42 @@ Security and Privacy Considerations:
 - Notification messages omit sensitive personal data; they include only relevant class details.  
 - Every modification is logged (actor ID, timestamp, changed fields) for full auditability.  
 - Retention policies govern archival of past class schedules according to institutional regulations.  
+
+<!-- PlantUML diagram  -->
+@startuml ManageClassesInstructors
+' Use Case: Manage Classes and Instructors
+' Actor: Administrator
+' Purpose: Create schedules & assign instructors
+left to right direction
+skinparam packageStyle rectangle
+
+actor Administrator
+
+rectangle "Class Management Module" {
+  
+  usecase "Create Class Offering" as UC_Create
+  usecase "Assign Instructor" as UC_Assign
+  usecase "Modify Schedule" as UC_Modify
+  usecase "Cancel Class" as UC_Cancel
+  usecase "Notify Stakeholders" as UC_Notify <<include>>
+  
+  UC_Assign .> UC_Create  : <<include>>
+  UC_Modify .> UC_Notify : <<include>>
+  UC_Cancel .> UC_Notify : <<include>>
+}
+
+Administrator --> UC_Create
+Administrator --> UC_Modify
+Administrator --> UC_Cancel
+
+note right of UC_Assign
+  • Checks instructor availability  
+  • Prevents conflicts  
+end note
+
+note left of UC_Notify
+  • Email & in-app alert  
+  • Logs delivery status  
+end note
+
+@enduml

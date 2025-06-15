@@ -57,3 +57,47 @@ Security and Privacy Considerations:
 - All data in transit and at rest is encrypted to ensure confidentiality.  
 - Analysis and export actions are logged (actor ID, timestamp, survey ID) for audit trails.  
 - Retention and archival policies apply to exported reports to comply with data protection regulations.  
+
+<!-- PlantUML diagram  -->
+
+@startuml AnalyzeSurveyFeedback
+' Use Case: Analyze Survey Feedback
+' Actor: Instructor
+' Purpose: Aggregate & visualize survey results
+left to right direction
+skinparam packageStyle rectangle
+
+actor Instructor
+
+rectangle "Survey Analysis Module" {
+  
+  usecase "Select Survey" as UC_Select
+  usecase "Compute Aggregates" as UC_Aggregate
+  usecase "Display Charts & Stats" as UC_Display
+  usecase "Apply Filters" as UC_Filter
+  usecase "Drill-Down Details" as UC_Drill
+  usecase "Export Analysis Report" as UC_Export
+
+  UC_Aggregate .> UC_Select : <<include>>
+  UC_Display .> UC_Aggregate : <<include>>
+  UC_Filter .> UC_Display  : <<extend>>
+  UC_Drill .> UC_Display   : <<extend>>
+  UC_Export .> UC_Display  : <<include>>
+}
+
+Instructor --> UC_Select
+Instructor --> UC_Filter
+Instructor --> UC_Drill
+Instructor --> UC_Export
+
+note right of UC_Display
+  • Bar, pie, line charts  
+  • Summary tables  
+end note
+
+note left of UC_Export
+  • PDF/CSV output  
+  • Includes charts & raw data  
+end note
+
+@enduml

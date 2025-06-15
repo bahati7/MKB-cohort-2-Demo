@@ -57,3 +57,45 @@ Security and Privacy Considerations:
 - All report generation and export actions occur over encrypted channels; exported files are protected (e.g., password-protected PDFs).  
 - Audit logs capture report type, parameters, actor ID, and timestamps for compliance oversight.  
 - Data retention policies govern the archival or purge of old report data in accordance with institutional and regulatory requirements.  
+
+<!-- PlantUML diagram  -->
+@startuml AnalyzeSystem
+' Use Case: Analyze System
+' Actor: Administrator
+' Purpose: Generate usage & performance reports
+left to right direction
+skinparam packageStyle rectangle
+
+actor Administrator
+
+rectangle "System Analytics Module" {
+  
+  usecase "Select Report Type" as UC_Select
+  usecase "Configure Parameters" as UC_Configure
+  usecase "Generate Report" as UC_Generate
+  usecase "View Dashboard" as UC_Dashboard
+  usecase "Schedule Reports" as UC_Schedule
+  usecase "Export Report" as UC_Export
+
+  UC_Configure .> UC_Select   : <<include>>
+  UC_Generate  .> UC_Configure: <<include>>
+  UC_Dashboard .> UC_Generate : <<include>>
+  UC_Export    .> UC_Dashboard: <<include>>
+  UC_Schedule  .> UC_Generate : <<extend>>
+}
+
+Administrator --> UC_Select
+Administrator --> UC_Schedule
+Administrator --> UC_Export
+
+note right of UC_Dashboard
+  • Interactive charts & tables  
+  • Trend lines, heat maps  
+end note
+
+note left of UC_Schedule
+  • Frequency: daily/weekly/etc.  
+  • Recipient list & time  
+end note
+
+@enduml
