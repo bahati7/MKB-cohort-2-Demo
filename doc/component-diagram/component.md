@@ -126,7 +126,7 @@ Auth ..> Notification
 
 ```
 
-![Component Diagram](image-2.png)
+![Component Diagram](image.png)
 
 ---
 
