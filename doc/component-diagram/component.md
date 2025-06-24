@@ -149,7 +149,7 @@ Notification --> [Email/SMS Gateway]
 
 ```
 
-![Component Diagram](image-6.png)
+![Component Diagram](Image_component_diagram.png)
 
 ---
 
