@@ -20,7 +20,11 @@ The goal of this diagram is to visualize how the system is structured in terms o
 
 ### Backend Core Services
 
-- **Authenticating Service**  
+- **API Gateway**
+  Acts as the single entry point for all frontend requests.
+  It handles routing, security, rate limiting, and central access control.
+
+- **Authentication Service (Auth)**
   Handles login, sign-up, logout, and session management.  
   Manages user sessions using JWT or secure cookies.  
   May support external auth providers.
@@ -44,6 +48,10 @@ The goal of this diagram is to visualize how the system is structured in terms o
   Sends notifications to users (email confirmations, survey reminders, etc.).  
   Connects to an external messaging service to deliver emails or SMS.
 
+  - **Logging & Audit Service**  
+    Records key user and admin actions (e.g., login attempts, survey modifications).
+    Useful for transparency and diagnostics.
+
 ### Database Layer
 
 - **Application Database (MySQL)**  
@@ -64,12 +72,14 @@ The goal of this diagram is to visualize how the system is structured in terms o
 
 ## Example Workflow
 
-1. A student logs in via the Web UI, which sends their credentials to the Authenticating Service.
-2. Upon successful login, they are redirected to the Student Home Screen.
-3. They complete a survey form; the data is passed to the Feedback and Reporting Service.
-4. The feedback is stored in the Application Database.
-5. A notification is triggered and handled by the Notification Service.
-6. The Notification Service communicates with the Email/SMS Gateway to deliver the message to the instructor.
+1. A student logs in via the Web UI.
+2. The request goes through the API Gateway.
+3. API Gateway routes it to the Authenticating Service.
+4. Upon successful login, the user is redirected to their role-based dashboard.
+5. The user submits a survey; Feedback is passed to the Feedback Service.
+6. Feedback is stored in the Database.
+7. A notification is triggered and handled by the Notification Service.
+8. Notification Service communicates with the Email/SMS Gateway to deliver messages.
 
 ---
 
@@ -92,47 +102,62 @@ skinparam defaultTextAlignment center
 title Component Diagram - Survey System
 
 ' Define components
-component "Web User Interface" as UI
-component "User Management Service" as UserMgmt
-component "Authenticating Service" as Auth
-component "Survey Management Service" as SurveyMgmt
-component "Feedback and Reporting Service" as FeedbackReport
-component "Notification Service" as Notification
-database "Application Database" as DB
+
+package "Internal System" {
+  component "Web User Interface" as UI
+  component "API Gateway" as APIGW
+  component "User Management Service" as UserMgmt
+  component "Authenticating Service" as Auth
+  component "Survey Management Service" as SurveyMgmt
+  component "Feedback and Reporting Service" as FeedbackReport
+  component "Notification Service" as Notification
+  component "Logging & Audit Service" as Logging
+  database "Data & System Operations" as DB
+}
 
 cloud "External Systems" {
   [Email/SMS Gateway]
 }
 
 ' Relationships (Primary Interactions)
-UI --> Auth
-UI --> UserMgmt
-UI --> SurveyMgmt
-UI --> FeedbackReport
+UI --> APIGW
+APIGW --> Auth
+APIGW --> UserMgmt
+APIGW --> SurveyMgmt
+APIGW --> FeedbackReport
+APIGW --> Notification
 
 Auth --> DB
 FeedbackReport --> DB
 SurveyMgmt --> DB
 UserMgmt --> DB
+Logging --> DB
 Notification --> DB
-Notification --> [Email/SMS Gateway]
 
 ' Service-to-Service interactions
 SurveyMgmt ..> Notification
+FeedbackReport ..> Notification
 Auth ..> Notification
+Auth ..> Logging
+UserMgmt ..> Logging
+SurveyMgmt ..> Logging 
+
+' External Communication
+Notification --> [Email/SMS Gateway]
 
 @enduml
 
-
 ```
 
-![Component Diagram](image-2.png)
+![Component Diagram](image-6.png)
 
 ---
 
 ## Notes
 
-- This version intentionally maintains a simplified structure, based on the initial component diagram shared by THEOPHILEACHIZA, while integrating the external dependency proposed by Philemon.
-- The representation of internal vs external components is for visualization purposes only and does not imply fixed architectural boundaries. The final implementation may evolve based on technical constraints or deployment choices.
-- The Notification Service remains optional for the MVP but is included for completeness.
-- In future iterations, we may further separate frontend/backend layers visually and introduce components such as API Gateway, Analytics Services, or Admin Logs.
+- This version builds on the initial diagram shared by THEOPHILEACHIZA, while integrating suggestions from Philemon, Samuel, and Gauthier.
+- The API Gateway is introduced as a central access point to align with service-oriented best practices.
+- The Logging & Audit Service is planned for post-MVP to ensure traceability of user actions.
+- The "Data & System Operations" component represents a more descriptive view of the database’s strategic role.
+- External dependencies such as email/SMS gateways are shown but considered optional for initial MVP implementation.
+- This documentation reflects both the MVP focus and future scalability.
