@@ -70,7 +70,7 @@ The goal of this diagram is to visualize how the system is structured in terms o
 
 ---
 
-## Example
+## Example Workflow
 
 1. A student logs in via the Web UI.
 2. The request goes through the API Gateway.
@@ -131,6 +131,7 @@ Auth --> DB
 FeedbackReport --> DB
 SurveyMgmt --> DB
 UserMgmt --> DB
+Logging --> DB
 Notification --> DB
 
 ' Service-to-Service interactions
@@ -148,7 +149,7 @@ Notification --> [Email/SMS Gateway]
 
 ```
 
-![Component Diagram](image-3.png)
+![Component Diagram](image-6.png)
 
 ---
 
