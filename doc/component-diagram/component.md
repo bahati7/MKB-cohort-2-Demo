@@ -168,7 +168,7 @@ Notification --> [Email/SMS Gateway]
 
 ```
 
-![Component Diagram](Image_component_diagram.png)
+![Component Diagram](doc/component-diagram/Image_component_diagram copy.png)
 
 
 ---
