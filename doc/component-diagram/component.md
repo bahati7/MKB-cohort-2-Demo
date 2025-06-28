@@ -104,14 +104,33 @@ title Component Diagram - Survey System
 ' Define components
 
 package "Internal System" {
-  component "Web User Interface" as UI
-  component "API Gateway" as APIGW
-  component "User Management Service" as UserMgmt
-  component "Authentication Service" as Auth
-  component "Survey Management Service" as SurveyMgmt
-  component "Feedback and Reporting Service" as FeedbackReport
-  component "Notification Service" as Notification
-  component "Logging & Audit Service" as Logging
+
+  rectangle "Frontend Team" {
+    component "Web User Interface" as UI
+  }
+
+  rectangle "API Integration Team" {
+    component "API Gateway" as APIGW
+  }
+
+  rectangle "Backend Team" {
+    component "User Management Service" as UserMgmt
+    component "Authentication Service" as Auth
+    component "Survey Management Service" as SurveyMgmt
+  }
+
+  rectangle "Analytics Team" {
+    component "Feedback and Reporting Service" as FeedbackReport
+  }
+
+  rectangle "Integration Team" {
+    component "Notification Service" as Notification
+  }
+
+  rectangle "DevOps Team" {
+    component "Logging & Audit Service" as Logging
+  }
+
   database "Application Database (MySQL)" as DB
 }
 
