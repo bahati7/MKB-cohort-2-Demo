@@ -74,7 +74,7 @@ The goal of this diagram is to visualize how the system is structured in terms o
 
 1. A student logs in via the Web UI.
 2. The request goes through the API Gateway.
-3. API Gateway routes it to the Authenticating Service.
+3. API Gateway routes it to the Authentication Service.
 4. Upon successful login, the user is redirected to their role-based dashboard.
 5. The user submits a survey; Feedback is passed to the Feedback Service.
 6. Feedback is stored in the Database.
@@ -107,12 +107,12 @@ package "Internal System" {
   component "Web User Interface" as UI
   component "API Gateway" as APIGW
   component "User Management Service" as UserMgmt
-  component "Authenticating Service" as Auth
+  component "Authentication Service" as Auth
   component "Survey Management Service" as SurveyMgmt
   component "Feedback and Reporting Service" as FeedbackReport
   component "Notification Service" as Notification
   component "Logging & Audit Service" as Logging
-  database "Data & System Operations" as DB
+  database "Application Database (MySQL)" as DB
 }
 
 cloud "External Systems" {
