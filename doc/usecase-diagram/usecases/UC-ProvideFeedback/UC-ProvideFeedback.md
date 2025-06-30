@@ -56,4 +56,4 @@ Security and Privacy Considerations:
 - Only aggregated or anonymized data is accessible to instructors or administrators for analysis.
 
 Here is the link overview of the plantUML:
-![Provide Feedback Use Case](doc/usecase-diagram/usecases/UC-ProvideFeedback/provide_feedback_usecase.png)
+![Provide Feedback Use Case](provide_feedback_usecase.png)
